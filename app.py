@@ -155,6 +155,11 @@ if 'unifier.py' in os.listdir():
     logger.critical('Unifier installation detected - backup app cannot run here!')
     sys.exit(1)
 
+if 'microfier.py' in os.listdir():
+    logger.critical('Unifier Micro installation detected - backup app cannot run here!')
+    sys.exit(1)
+
+
 if __name__ == '__main__':
     logger.info(f'Starting Flask app')
     if config['custom_tls']:
